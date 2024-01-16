@@ -7,7 +7,16 @@ import Image from "next/image";
 export default function Home() {
 
     const { loading, setLoading } = useProfile();
-    const [data, setData] = useState({});
+    const [data, setData] = useState({
+        avatar_url: 'unknown',
+        name: 'unknown',
+        company: 'unknown',
+        following: 0,
+        followers: 0,
+        bio: 'unknown',
+        url: 'unknown',
+        login: 'unknown'
+    });
     async function handleApi() {
         setLoading(true);
         try {
