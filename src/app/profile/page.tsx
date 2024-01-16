@@ -27,18 +27,18 @@ export default function Home() {
             <button disabled={loading} onClick={handleApi} className="bg-blue-500 disabled:opacity-80 rounded-lg ring-1 shadow p-3 mt-5 text-white ">Load Profile</button>
             {
                 <div className="mt-5 shadow-lg ring-1 p-5 rounded flex flex-col gap-3">
-                    <img alt="" className="rounded-xl" width={"200px"} height={"200px"} src={data.avatar_url} />
+                    <img alt="" className="rounded-xl" width={"200px"} height={"200px"} src={data?.avatar_url} />
                     <div className="">
-                        <span className="text-2xl text-slate-600">{data.name}</span>
+                        <span className="text-2xl text-slate-600">{data?.name}</span>
                     </div>
                     <div className="">
-                        <p><b>Username:</b>{data.login}</p>
-                        <p><b>Company:</b>{data.company}</p>
-                        <p><b>Followers:</b>{data.followers}</p>
-                        <p><b>Following:</b>{data.following}</p>
+                        <p><b>Username:</b>{data?.login}</p>
+                        <p><b>Company:</b>{data?.company}</p>
+                        <p><b>Followers:</b>{data?.followers}</p>
+                        <p><b>Following:</b>{data?.following}</p>
                         <p>
                             <b> Bio:</b> <i>
-                                {data.bio}
+                                {data?.bio}
                             </i>
                         </p>
                         <a className="bg-blue-500 px-5 py-2 inline-block text-white rounded mt-3" href={data.url}>Visit On Github</a>
